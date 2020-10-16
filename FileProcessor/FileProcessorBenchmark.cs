@@ -10,18 +10,18 @@ namespace FileProcessor
     public class FileProcessorBenchmark
     {
 
-        [Params("SmallData.txt", "LargeData.txt")]
+        [Params("LargeData.txt")]
         public string path;
         public Stream inputStream;
         public FileProcessor processor = new FileProcessor();
 
-        [GlobalSetup]
+        [IterationSetup]
         public void SetupStream()
         {
             inputStream = File.OpenRead(path);
         }
 
-        [GlobalCleanup]
+        [IterationCleanup]
         public void Cleanup()
         {
             inputStream.Dispose();

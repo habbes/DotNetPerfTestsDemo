@@ -34,5 +34,5 @@ cd FileProcessor
 dotnet run -c Release
 ```
 
-The current implementation is suboptimal. The challenge is for you to create an alternative
+The reference implementation is suboptimal. The challenge is for you to create an alternative
 implementation that's faster and minimizes heap allocations.
